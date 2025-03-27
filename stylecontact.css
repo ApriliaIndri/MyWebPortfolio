@@ -1,0 +1,115 @@
+body {
+  background: linear-gradient(180deg, #3a3a3a, #222222, #0d0d0d);
+  background-attachment: fixed;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background: #87ceeb;
+  padding: 50px 10px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #00aaff;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 10px;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 80%;
+  max-width: 500px;
+  min-height: 100px;
+  margin: 0 auto;
+  background: rgba(34, 34, 34, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-card img {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2) drop-shadow(0px 5px 7px rgba(255, 255, 255, 0.3));
+}
+
+.contact-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.contact-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-back {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah */
+  left: 20px; /* Jarak dari kiri */
+  background: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  z-index: 9999;
+}
+
+/* Efek hover tombol kembali */
+.btn-back:hover {
+  background: #00aaff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

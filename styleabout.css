@@ -1,0 +1,193 @@
+html,
+body {
+  background-color: #0d0d0d;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+/* Header Navigation */
+header {
+  width: 100%;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #00aaff;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+  min-height: 100vh;
+}
+
+.about-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile Container */
+.container {
+  display: flex;
+  align-items: center;
+  background: #131212;
+  box-shadow: 0px 4px 15px rgba(135, 206, 235, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  color: white;
+  margin-bottom: 50px;
+  gap: 40px;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+/* Profile Image */
+.profile-img {
+  width: 150px;
+  max-width: 100%;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+/* Education Section */
+.education h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Education Containers */
+.edu-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.edu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: #1b1b1b;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 350px;
+  min-width: 300px;
+  height: 100px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.edu-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.edu-container.fade-in .edu-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edu-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 20px rgba(135, 206, 235, 0.4);
+}
+
+/* Education Logos */
+.edu-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.edu-logo img:hover {
+  transform: scale(1.2);
+}
+
+.typing-text::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  z-index: 9999;
+}
+
+.back-button:hover {
+  background: #00aaff;
+}

@@ -1,0 +1,202 @@
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.projects {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Header Navigation */
+header {
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: #00aaff;
+}
+
+/* Section Projects */
+.projects {
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
+}
+
+/* Container Project */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Bubble Proyek */
+.project1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: hsl(0, 0%, 11%);
+  padding: 1.5rem;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1200px;
+  min-width: 300px;
+  box-shadow: 0px 4px 10px rgba(135, 206, 235, 0.2);
+  margin-top: 5px;
+  margin-bottom: 50px;
+  transition: transform 0s ease-in-out, box-shadow 0.3s ease-in-out;
+  -webkit-transition: transform 0s ease-in-out, box-shadow 0.3s ease-in-out;
+  -moz-transition: transform 0s ease-in-out, box-shadow 0.3s ease-in-out;
+  -ms-transition: transform 0s ease-in-out, box-shadow 0.3s ease-in-out;
+  -o-transition: transform 0s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project1:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 8px 20px rgba(135, 206, 235, 0.4);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+}
+
+/* Gambar Proyek (Hanya 3 gambar per baris) */
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Informasi Proyek */
+.project-info {
+  text-align: left;
+  width: 100%;
+  color: white;
+  padding-top: 10px;
+}
+
+.project1 p {
+  text-align: left;
+  width: 100%;
+}
+
+.project2 p {
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .project-images {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-images {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-out forwards;
+  -webkit-animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol Kembali */
+.btn-back {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #87ceeb;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.btn-back:hover {
+  background: #00aaff;
+}

@@ -1,0 +1,88 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0b0b;
+  color: #ffffff;
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Daftar menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 60px;
+  padding: 0;
+  margin-left: auto;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 15px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+nav ul li a:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(135, 206, 235, 0.6),
+    rgba(135, 206, 235, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 10px rgba(135, 206, 235, 0.8);
+}
+
+/* Efek animasi untuk menu */
+.menu-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BAGIAN NAMA */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70vh;
+  padding-left: 70px;
+}
+
+.nama {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: -20px;
+  background: linear-gradient(50deg, #87ceeb, #f5f5f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding-left: 20px;
+  }
+}
